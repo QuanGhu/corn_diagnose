@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['prefix' => 'disease'], function () {
+    Route::get('/','DiseaseController@index');
+    Route::post('/store','DiseaseController@store');
+    Route::put('/store','DiseaseController@update');
+    Route::delete('/delete', 'DiseaseController@delete');
+});
