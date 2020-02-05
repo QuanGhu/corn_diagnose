@@ -23,3 +23,10 @@ Route::group(['prefix' => 'disease'], function () {
     Route::put('/store','DiseaseController@update');
     Route::delete('/delete', 'DiseaseController@delete');
 });
+
+Route::group(['prefix' => 'cause'], function () {
+    Route::get('/','CauseController@index');
+    Route::post('/store','CauseController@store');
+    Route::put('/store','CauseController@update');
+    Route::delete('/delete', 'CauseController@delete');
+});
