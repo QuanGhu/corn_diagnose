@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Diagnose extends Model
 {
     //declare table name
-    protected $table = 'diagnoses';
+    protected $table = 'diseases';
 
     //declare field able to fill
     protected $fillable = [

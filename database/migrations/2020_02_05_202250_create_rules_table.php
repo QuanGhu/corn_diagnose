@@ -16,8 +16,8 @@ class CreateRulesTable extends Migration
         if (!Schema::hasTable('rules')) {
             Schema::create('rules', function (Blueprint $table) {
                 $table->bigIncrements('id');
-                $table->unsigneBigInteger('disease_id');
-                $table->unsigneBigInteger('cause_id');
+                $table->unsignedBigInteger('disease_id');
+                $table->unsignedBigInteger('cause_id');
                 $table->timestamps();
 
                 $table->foreign('disease_id')->references('id')->on('diseases')->onDelete('cascade');

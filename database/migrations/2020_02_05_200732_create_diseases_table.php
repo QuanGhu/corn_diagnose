@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDiagnosesTable extends Migration
+class CreateDiseasesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateDiagnosesTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('diagnoses')) {
-            Schema::create('diagnoses', function (Blueprint $table) {
+        if (!Schema::hasTable('diseases')) {
+            Schema::create('diseases', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('name');
                 $table->timestamps();

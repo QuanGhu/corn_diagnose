@@ -17,7 +17,7 @@ class CreateSolutionsTable extends Migration
             Schema::create('solutions', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('name');
-                $table->unsigneBigInteger('disease_id');
+                $table->unsignedBigInteger('disease_id');
                 $table->timestamps();
 
                 $table->foreign('disease_id')->references('id')->on('diseases')->onDelete('cascade');
