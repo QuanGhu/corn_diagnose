@@ -4,19 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Diagnose extends Model
+class Solution extends Model
 {
     //declare table name
-    protected $table = 'diagnoses';
+    protected $table = 'solutions';
 
     //declare field able to fill
     protected $fillable = [
-        'name'
+        'name','disease_id'
     ];
 
-    public function solutions()
+    public function disease()
     {
-        return $this->hasMany(Solution::class, 'disease_id');
+        return $this->belongsTo(Diagnose::class,'disease_id');
     }
 
     public function getNameAttribute($value)
