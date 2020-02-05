@@ -30,3 +30,7 @@ Route::group(['prefix' => 'cause'], function () {
     Route::put('/store','CauseController@update');
     Route::delete('/delete', 'CauseController@delete');
 });
+
+Route::group(['prefix' => 'diagnose'], function () {
+    Route::post('/process', 'DiagnoseController@process');
+});

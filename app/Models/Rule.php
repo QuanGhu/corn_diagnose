@@ -16,12 +16,12 @@ class Rule extends Model
 
     public function disease()
     {
-        return $this->belongsTo(Diagnose::class,'disease_id');
+        return $this->belongsTo(Disease::class,'disease_id');
     }
 
     public function cause()
     {
-        return $this->belongsTo(Diagnose::class,'cause_id');
+        return $this->belongsTo(Disease::class,'cause_id');
 
     }
 }
