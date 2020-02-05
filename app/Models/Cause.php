@@ -14,6 +14,11 @@ class Cause extends Model
         'name'
     ];
 
+    public function rules()
+    {
+        return $this->hasMany(Rule::class, 'cause_id');
+    }
+
     public function getNameAttribute($value)
     {
         return ucwords($value);

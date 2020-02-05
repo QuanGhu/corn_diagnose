@@ -14,6 +14,11 @@ class Diagnose extends Model
         'name'
     ];
 
+    public function rules()
+    {
+        return $this->hasMany(Rule::class, 'disease_id');
+    }
+
     public function solutions()
     {
         return $this->hasMany(Solution::class, 'disease_id');
